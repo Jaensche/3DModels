@@ -10,7 +10,7 @@ SwingMountWidth = SwingWidth + 0.5;
 //color("red") rotor();
 
 //translate([0, 30, 0])
-//color("blue") base();    
+color("blue") base();    
 
 //translate([0, -27, 21]) 
 //color("yellow") swing();
@@ -18,7 +18,7 @@ SwingMountWidth = SwingWidth + 0.5;
 //translate([-30, 0, 0]) 
 //color("green") rod();
 
-color("pink") base();
+//color("pink") base();
 
 module rotor()
 {            
@@ -42,8 +42,8 @@ module rotor()
         translate([0, 0, 0])
             cylinder (h = 50, r=5, center = true);
             
-        translate([0, 0, 0])
-            cylinder (h = 5, r=9.5, center = true);                           
+         translate([0, 0, -1])
+            cylinder (h = 6, r=9.55, center = false);                  
                 
             
         difference()
@@ -63,6 +63,8 @@ module rotor()
         translate([-SwingMountWidth/2, -25, 20])
                 cube([SwingMountWidth, 20, 20]); 
     }  
+    
+       
 }
     
 module base()
@@ -71,23 +73,23 @@ module base()
     {     
         union()
         {                
-            translate([-25, -25, 0])
-                cube ([50, 50, 5]);        
+            translate([-50, -50, 0])
+                cube ([100, 100, 5]);        
         
             translate([0, 0, 5])
                 cylinder (h = 6, r=4.95);
         } 
         
-        translate([-18, -18, 0])
+        translate([-40, -40, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([-18, 18, 0])
+        translate([-40, 40, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([18, -18, 0])
+        translate([40, -40, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([18, 18, 0])
+        translate([40, 40, 0])
             cylinder (h = 20, r=2, center = true);
     }
 }   
