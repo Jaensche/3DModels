@@ -73,23 +73,23 @@ module base()
     {     
         union()
         {                
-            translate([-50, -50, 0])
-                cube ([100, 100, 5]);        
+            translate([-37.5, -37.5, 0])
+                cube ([75, 75, 5]);        
         
             translate([0, 0, 5])
                 cylinder (h = 6, r=4.95);
         } 
         
-        translate([-40, -40, 0])
+        translate([-25, -25, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([-40, 40, 0])
+        translate([-25, 25, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([40, -40, 0])
+        translate([25, -25, 0])
             cylinder (h = 20, r=2, center = true);
         
-        translate([40, 40, 0])
+        translate([25, 25, 0])
             cylinder (h = 20, r=2, center = true);
     }
 }   
