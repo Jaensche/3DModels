@@ -71,25 +71,16 @@ module bar()
 
 module turntable()
 {
-  difference()
-  {
-    cylinder(h=2,d=32);
-    
-    translate([-3.25,-1,-8])
-      cube([6.5,2,10]);
-    
-    translate([-1,-3.25,-8])
-      cube([2,6.5,10]);
-  }
+  cylinder(h=2,d=32);  
 }
 
 module shaft()
 {  
-  translate([-2.75,-1,0])
-    cube([5.5,2,10]);
+  translate([-2.9,-1,0])
+    cube([5.8,2,8]);
     
-  translate([-1,-2.75,0])
-    cube([2,5.5,10]);
+  translate([-1,-2.9,0])
+    cube([2,5.8,8]);
 }
 
 module sonic()
@@ -103,7 +94,7 @@ module sonic()
   translate([40,0,0])
     turntable();
   
-  translate([-10,0,0])
+  translate([40,0,-8])
     shaft();
 }
 
