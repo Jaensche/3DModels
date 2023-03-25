@@ -96,6 +96,19 @@ module sonic()
   
   translate([40,0,-8])
     shaft();
+  
+  translate([-40,0,0])
+    balloon();
+}
+
+module balloon()
+{
+  cylinder(h=2,d=33); 
+  
+  rotate([0,0,90])
+    linear_extrude(2)
+      translate([-30,0,0])
+      polygon(points=[[10,10],[20,20],[40,20],[50,10]]);
 }
 
 sonic();
